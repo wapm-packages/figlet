@@ -19,10 +19,10 @@
 SHELL = /bin/sh
 
 # The C compiler and linker to use
-CC	= gcc
-CFLAGS	= -g -O2 -Wall -Wno-unused-value
-LD	= gcc
-LDFLAGS =
+CC	= zig cc
+CFLAGS	= -g -O2 -Wno-unused-value -target wasm32-wasi
+LD	= zig cc
+LDFLAGS =  -target wasm32-wasi
 
 # Feature flags:
 #   define TLF_FONTS to use TOIlet TLF fonts
@@ -38,9 +38,9 @@ BINDIR	= $(prefix)/bin
 MANDIR	= $(prefix)/man
 
 # Where figlet will search first for fonts (the ".flf" files).
-DEFAULTFONTDIR = $(prefix)/share/figlet
+# DEFAULTFONTDIR = $(prefix)/share/figlet
 # Use this definition if you can't put things in $(prefix)/share/figlet
-#DEFAULTFONTDIR = fonts
+DEFAULTFONTDIR = fonts
 
 # The filename of the font to be used if no other is specified,
 #   without suffix.(standard is recommended, but any other can be

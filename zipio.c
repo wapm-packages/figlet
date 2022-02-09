@@ -297,12 +297,14 @@ static void BufferInitialize(
     fseek(zs->tmpfil, 0, SEEK_SET);
   }
 
+  #ifndef __wasi__
   /* If there's no file open, see if it's big enough for temp file */
   if (!zs->tmpfil)
   {
     if (zs->usiz >= BUFFERTHRESHOLD)
       zs->tmpfil = tmpfile();
   }
+  #endif
 
   /* If there's no file open, then use memory buffering */
   if (!zs->tmpfil)

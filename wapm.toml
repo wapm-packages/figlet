@@ -1,0 +1,37 @@
+[package]
+name = "syrusakbary/figlet"
+version = "0.0.1"
+description = "FIGlet is a program for making large letters out of ordinary text"
+readme = "README"
+repository = "https://github.com/cmatsuoka/figlet"
+
+[[module]]
+name="figlet"
+source="figlet.wasm"
+abi = "wasi"
+interfaces = {wasi= "0.0.0-unstable"}
+
+[[module]]
+name="chkfont"
+source="chkfont.wasm"
+abi = "wasi"
+interfaces = {wasi= "0.0.0-unstable"}
+
+[[command]]
+name="figlet"
+module="figlet"
+
+[[command]]
+name="chkfont"
+module="chkfont"
+
+[fs]
+"./fonts"="fonts"
+
+# [[command]]
+# name = "cksum"
+# module = "uutils"
+
+# [[command]]
+# name = "hashsum"
+# module = "uutils"

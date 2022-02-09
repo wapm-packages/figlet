@@ -6,3 +6,4 @@ core
 *~
 tests.log
 *.tar.gz
+*.wasm
