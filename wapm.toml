@@ -1,21 +1,21 @@
 [package]
 name = "syrusakbary/figlet"
-version = "0.0.1"
+version = "0.0.2"
 description = "FIGlet is a program for making large letters out of ordinary text"
-readme = "README"
-repository = "https://github.com/cmatsuoka/figlet"
+readme = "README_wapm.md"
+repository = "https://github.com/wapm-packages/figlet"
 
 [[module]]
 name="figlet"
 source="figlet.wasm"
 abi = "wasi"
-interfaces = {wasi= "0.0.0-unstable"}
+interfaces = {wasi= "0.1.0-unstable"}
 
 [[module]]
 name="chkfont"
 source="chkfont.wasm"
 abi = "wasi"
-interfaces = {wasi= "0.0.0-unstable"}
+interfaces = {wasi= "0.1.0-unstable"}
 
 [[command]]
 name="figlet"
