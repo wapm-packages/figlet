@@ -1,6 +1,6 @@
 [package]
 name = "syrusakbary/figlet"
-version = "0.0.2"
+version = "0.0.3"
 description = "FIGlet is a program for making large letters out of ordinary text"
 readme = "README_wapm.md"
 repository = "https://github.com/wapm-packages/figlet"

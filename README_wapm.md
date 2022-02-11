@@ -8,7 +8,7 @@ screen characters
 | | |   <  __/ | |_| | | | \__ \_ 
 |_|_|_|\_\___|  \__|_| |_|_|___(_)
                                   
-````
+```
 
 (This is meant to be viewed in a monospaced font.)  FIGlet can create
 characters in many different styles and can kern and "smush" these
